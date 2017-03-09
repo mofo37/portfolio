@@ -20,3 +20,5 @@ Projects.prototype.toHtml = function() {
   return newProject;
 };
 newProject.removeClass();
+
+
