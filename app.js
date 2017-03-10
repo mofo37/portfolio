@@ -1,8 +1,8 @@
 'use strict';
 
-var addedProjects = [];
+var projects = [];
 
-var Projects = function(input) {
+function Project (input) {
   this.name = input.name;
   this.homePage = input.homePage;
   this.author = input.author;
@@ -11,12 +11,12 @@ var Projects = function(input) {
 };
 
 Projects.prototype.toHtml = function() {
-  var newProject = $('article.template').clone();
-  newProject.find('name').text(this.name);
-  newProject.attr('project-image', this.homePage);
-  newProject.attr('author', this.author);
-  newProject.attr('project-link', this.projectLink);
-  newProject.find('description').toHtml(this.description);
-  return newProject;
+  var $newProject = $('article.template').clone();
+  $newProject.find('name').text(this.name);
+  $newProject.find('project-image', this.homePage);
+  $newProject.attr('author', this.author);
+  $newProject.attr('project-link', this.projectLink);
+  $newProject.find('description').toHtml(this.description);
+  return $newProject;
 };
-newProject.removeClass();
+$newProject.removeClass();
