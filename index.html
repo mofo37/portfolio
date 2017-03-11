@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="layout.css" />
     <link rel="stylesheet" href="style.css">
     <title>Morgan Fogarty</title>
+    <script id="entry-template" type="text/x-handlebars-template">
+    <article data-category="{{this.category}}" data-author="{{this.author}}">
+        <h1>{{this.title}}</h1>
+        <div class="byline">
+          By <address>{{this.author}}</address>
+        </div>
+        <section>{{{this.description}}}</section>    
+      </article>
+    </script></script>
   </head>
   <body>
     <header class="site-header clearfix">
@@ -36,6 +45,9 @@
   </div>-->
     <footer>
     </footer>
-    <!--<script src="app.js"></script>-->
+    <script src="app.js"></script>
+    <script src="projects.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+
   </body>
 </html>
