@@ -29,6 +29,7 @@
   .heading-group-h1 {
     padding: .1em .1em .1em 2em;
     float: none;
+    display: block;
   }
 
   #filters select {
@@ -40,4 +41,20 @@
     width: 20em;
     display: inline;
   }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main-nav ul li {
+    display: inline-block;
+  }
 }
+
+
