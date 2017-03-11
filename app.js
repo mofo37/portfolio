@@ -19,4 +19,5 @@ Projects.prototype.toHtml = function() {
   $newProject.find('description').toHtml(this.description);
   return $newProject;
 };
+
 $newProject.removeClass();
