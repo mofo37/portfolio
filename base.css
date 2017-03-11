@@ -33,13 +33,13 @@ article {
 
 a, a:link, a:active {
   text-decoration: none;
-  color: #777;
+  color: black;
 }
 
 a:hover, a:focus {
-  color: #29506D;
+  color: black;
 }
 
 a:visited {
-  color: #AAA;
+  color: black;
 }
