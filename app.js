@@ -11,9 +11,9 @@ function Project (input) {
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone().removeClass('template');
   $newProject.find('h1:first').text(this.title);
-  $newProject.find('.project-image', this.homePage);
+  $newProject.find('.project-image img').attr('src', this.homePage);
   $newProject.find('.author').text(this.author);
-  $newProject.find('.project-link a').attr('href', this.projectLink);
+  $newProject.find('.project-link a').attr('href', this.projectLink).text(this.projectLink);
   $newProject.find('.description').html(this.description);
   return $newProject;
 };
