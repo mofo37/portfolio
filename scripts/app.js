@@ -9,13 +9,10 @@ function Project (input) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone().removeClass('template');
-  $newProject.find('h1:first').text(this.title);
-  $newProject.find('.project-image img').attr('src', this.homePage);
-  $newProject.find('.author').text(this.author);
-  $newProject.find('.project-link a').attr('href', this.projectLink).text(this.projectLink);
-  $newProject.find('.description').html(this.description);
-  return $newProject;
+  var source = $('#entry-template').html();
+  var template = Handlebars.compile(source);
+  var html = template(this);
+  return html;
 };
 
 Project.prototype.render = function() {
