@@ -3,15 +3,15 @@
 var sourceData = [
   {
     title: 'Salmon Cookies',
-    homePage: 'img',
+    homePage: 'images/salmon-cookies.png',
     author: 'Morgan Fogarty',
-    projectLink: 'https://mofo37.github.io/salmoncookie_repo/',
+    projectLink: 'https://mofo37.github.io/salmoncookie_repo',
     description: 'This is a project about cookies made out of Salmon.'
   },
 
   {
     title: 'About Morgan',
-    homePage: 'img',
+    homePage: 'images/about-me.png',
     author: 'Morgan Fogarty',
     projectLink: 'https://mofo37.github.io/second_repo/index.html',
     description: 'This is a project about me.'
@@ -19,9 +19,9 @@ var sourceData = [
 
   {
     title: 'Beer Buddies',
-    homePage: 'img',
+    homePage: 'images/beer-buddies.png',
     author: 'Morgan Fogarty',
-    projectLink: 'https://beer-buddies.github.io/beer_buddies/',
+    projectLink: 'https://beer-buddies.github.io/beer_buddies',
     description: 'This is a beer-drinking game.'
   }
 ];
