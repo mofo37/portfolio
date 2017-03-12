@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="layout.css" />
     <link rel="stylesheet" href="style.css">
     <title>Morgan Fogarty</title>
-    <script id="entry-template" type="text/x-handlebars-template">
-    <article data-category="{{this.category}}" data-author="{{this.author}}">
-        <h1>{{this.title}}</h1>
+    <!--<script id="entry-template" type="text/x-handlebars-template">
+    <article data-category="{{category}}" data-author="{{author}}">
+        <h1>{{title}}</h1>
         <div class="byline">
-          By <address>{{this.author}}</address>
+          By <address>{{author}}</address>
         </div>
-        <section>{{{this.description}}}</section>    
+        <section>{{{description}}}</section>    
       </article>
     </script></script>
   </head>
-  <body>
+  <body>-->
     <header class="site-header clearfix">
       <section class="main-heading">
         <h1>Morgan Fogarty</h1>
@@ -34,20 +34,28 @@
           </ul>
         </nav>
     </header>
-    <!--<div class="article">
-    <h2 class="name">Name</h2>
-      <ul>
-        <li class="project-image"></li>
-        <li class="author"></li>
-        <li class="project-link"></li>
-        <li class="description"></li>
-      </ul>
-  </div>-->
+
+    <main>
+      <article class="template" data-category="placeholder-category">
+        <header>
+          <h1>Title</h1>
+        </header>
+        <section id="articles">
+          <ul>
+            <li class="project-image"></li>
+            <li class="author"></li>
+            <li class="project-link"><a href=""></a></li>
+            <li class="description"></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
     <footer>
     </footer>
-    <script src="app.js"></script>
-    <script src="projects.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-
+    <script src="projects.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
