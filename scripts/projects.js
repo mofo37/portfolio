@@ -10,7 +10,7 @@ var sourceData = [
   },
 
   {
-    title: 'About Morgan',
+    title: 'Get To Know Morgan',
     homePage: 'images/about-me.png',
     author: 'Morgan Fogarty',
     projectLink: 'https://mofo37.github.io/second_repo/index.html',
