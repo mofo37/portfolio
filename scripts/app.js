@@ -22,3 +22,24 @@ Project.prototype.render = function() {
 sourceData.forEach(function(ele) {
   new Project(ele).render();
 });
+
+Project.fetchAll = function() {
+  if (localStorage.rawData){
+    var storedData = localStorage.getItem(Data);
+    Project.loadAll(storedData);
+
+  } else {
+    $.ajax({
+      url:'projects.json',
+      method:'GET',
+      success: function(data) {
+        localStorage.setItem('data', data);
+        Project.loadAll(data);
+        
+      },
+      error: function(err) {
+        console.log('in error handler', err);
+      }
+    });
+  }
+};

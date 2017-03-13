@@ -1,5 +1,5 @@
 'use strict';
-var "sourceData": [
+var "sourceData" : [
   {
     "title" : "Salmon Cookies",
     "homePage" : "images/salmon-cookies.png",
@@ -9,8 +9,8 @@ var "sourceData": [
   },
 
   {
-    "title" : "Get To Know Morgan",
-    "homePage" : "images/about-me.png",
+    "title : Get To Know Morgan",
+    "homePage : images/about-me.png",
     "author" : "Morgan Fogarty",
     "projectLink" : "https://mofo37.github.io/second_repo/index.html",
     "description" : "This is a project about me."
