@@ -15,23 +15,28 @@ Project.prototype.toHtml = function() {
   return html;
 };
 
-Project.prototype.render = function() {
-  $('main').append(this.toHtml());
+Project.loadAll = function(data) {
+  Project.prototype.render = function() {
+    $('main').append(this.toHtml());
+  };
+  data.forEach(function(ele) {
+    new Project(ele).render();
+  });
 };
 
 Project.fetchAll = function() {
-  if (localStorage.rawData){
-    var storedData = localStorage.getItem(rawData);
-    Project.loadAll(storedData);
-
+  if (localStorage.data){
+    var storedData = localStorage.getItem('data');
+    var parsedData = JSON.parse(storedData);
+    Project.loadAll(parsedData);
   } else {
     $.ajax({
-      url:'projects.json',
+      url:'scripts/projects.json',
       method:'GET',
       success: function(data) {
-        localStorage.setItem('data', data);
+        var stringData = JSON.stringify(data);
+        localStorage.setItem('data', stringData);
         Project.loadAll(data);
-        
       },
       error: function(err) {
         console.log('in error handler', err);
@@ -39,9 +44,3 @@ Project.fetchAll = function() {
     });
   }
 };
-
-
-
-sourceData.forEach(function(ele) {
-  new Project(ele).render();
-});

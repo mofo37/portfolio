@@ -1,5 +1,4 @@
-{
-  "projects": [{
+   [{
       "title": "Salmon Cookies",
       "homePage": "images/salmon-cookies.png",
       "author": "Morgan Fogarty",
@@ -23,4 +22,4 @@
       "description": "This is a beer-drinking game."
     }
   ]
-}
+

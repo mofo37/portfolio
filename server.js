@@ -3,10 +3,10 @@ const app = express();
 
 const PORT = 3000;
 
-app.use(express.static('./portfolio'));
+app.use(express.static('./public'));
 
 app.get('/', function(request, response){
-  response.sendFile('/index.html', {root: '.'});
+  response.sendFile('/index.html', {root: './public'});
 });
 
 app.listen(PORT, function() {
