@@ -19,13 +19,9 @@ Project.prototype.render = function() {
   $('main').append(this.toHtml());
 };
 
-sourceData.forEach(function(ele) {
-  new Project(ele).render();
-});
-
 Project.fetchAll = function() {
   if (localStorage.rawData){
-    var storedData = localStorage.getItem(Data);
+    var storedData = localStorage.getItem(rawData);
     Project.loadAll(storedData);
 
   } else {
@@ -43,3 +39,9 @@ Project.fetchAll = function() {
     });
   }
 };
+
+
+
+sourceData.forEach(function(ele) {
+  new Project(ele).render();
+});
