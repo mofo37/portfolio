@@ -3,7 +3,7 @@
 Project.fetchAll();
 
 (function(module) {
-  const articleController = {};
+  const homeController = {};
 
   homeController.logview = function() {
     console.log('From homeController');
