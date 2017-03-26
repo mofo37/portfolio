@@ -7,7 +7,7 @@ articleView.handleMainNav = function() {
     $('#' + $(this).data('content')).fadeIn();
   });
 
-  $('.main-nav .tab:first').click();
+  $('.main-nav .tab').click();
 };
 
 
