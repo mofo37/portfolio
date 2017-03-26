@@ -17,7 +17,7 @@ Project.prototype.toHtml = function() {
 
 Project.loadAll = function(data) {
   Project.prototype.render = function() {
-    $('main').append(this.toHtml());
+    $('#articles').append(this.toHtml());
   };
   data.forEach(function(ele) {
     new Project(ele).render();
