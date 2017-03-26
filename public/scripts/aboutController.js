@@ -3,13 +3,10 @@
 (function(module) {
   const aboutController = {};
 
-  aboutController.logview = function() {
-    console.log('From aboutController');
-  }
-
   aboutController.render = function() {
-    $('.template').hide();
+    $('#articles').hide();
     $('#about').fadeIn();
+    console.log('I\'m about');
   }
 
   module.aboutController = aboutController;

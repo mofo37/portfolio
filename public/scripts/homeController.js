@@ -1,13 +1,9 @@
 'use strict';
 
-Project.fetchAll();
+  Project.fetchAll();
 
 (function(module) {
   const homeController = {};
-
-  homeController.logview = function() {
-    console.log('From homeController');
-  }
 
   homeController.render = function() {
     $('#about').hide();
