@@ -8,7 +8,7 @@
   }
 
   aboutController.render = function() {
-    $('#articles').hide();
+    $('.template').hide();
     $('#about').fadeIn();
   }
 
