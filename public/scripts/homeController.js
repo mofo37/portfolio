@@ -1,8 +1,9 @@
 'use strict';
 
-  Project.fetchAll();
+Project.fetchAll();
 
 (function(module) {
+  console.log('homeController');
   const homeController = {};
 
   homeController.render = function() {
