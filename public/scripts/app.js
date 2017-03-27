@@ -16,6 +16,7 @@ Project.prototype.toHtml = function() {
 };
 
 Project.loadAll = function(data) {
+  console.log('app1');
   Project.prototype.render = function() {
     $('#articles').append(this.toHtml());
   };
@@ -26,6 +27,7 @@ Project.loadAll = function(data) {
 
 Project.fetchAll = function() {
   if (localStorage.data){
+    console.log('app2')
     var storedData = localStorage.getItem('data');
     var parsedData = JSON.parse(storedData);
     Project.loadAll(parsedData);

@@ -18,6 +18,18 @@
         </div>
         <section>{{{description}}}</section>   
       </script> 
+      <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
   </head>
   <body>
     <header class="site-header clearfix">
@@ -26,17 +38,15 @@
         <nav class="main-nav">
         <div class="icon-menu"></div>
           <ul>
-            <li class="tab" data-content="articles"><a href="/home" class="icon-home3"> Home</a></li>
+            <li class="tab" data-content="articles"><a href="/" class="icon-home3"> Home</a></li>
             <li class="tab" data-content="about"><a href="/about" class="icon-rocket"> About</a></li>
             <li><a href="https://twitter.com/mofo37" target="_blank" class="icon-twitter3"> Twitter</a></li>
             <li><a href="https://github.com/mofo37" target="_blank" class="icon-github"> GitHub</a></li>
+            <li class="tab" data-content="repos"><a href="/repos" class="icon-happy2"> GitHub Repos</a></li>
           </ul>
     </header>
     <main>
     <section id="about" class="tab-content">
-        <header>
-          About Morgan
-        </header>
         <section>
           <h1>Some of my interests:</h1>
           <ul>
@@ -46,8 +56,8 @@
           </ul>
         </section>
       </section>
-      <section id="articles" class="tab-content">
-      </section>
+      <section id="articles" class="tab-content"></section>
+      <section id="repos" class="tab-content"></section>
     </main>
         </nav>
     <footer>
@@ -60,6 +70,9 @@
     <script src="scripts/page.js"></script>
     <script src="scripts/aboutController.js"></script>
     <script src="scripts/homeController.js"></script>
+    <script src="scripts/repos.js"></script>
+    <script src="scripts/renderRepos.js"></script>
+    <script src="scripts/reposController.js"></script>
     <script src="scripts/route.js"></script>
   </body>
 </html>
